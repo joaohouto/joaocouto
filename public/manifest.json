@@ -1,0 +1,15 @@
+{
+    "name": "João Couto",
+    "short_name": "João Couto",
+    "theme_color": "#222222",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "700x700",
+        "type": "image/png"
+      }
+    ]
+  }
