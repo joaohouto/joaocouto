@@ -33,7 +33,7 @@ export default function Home({ posts }) {
         <meta property="og:image" content="/img/background.jpg" />
       </Head>
 
-      <content className="home-container" style={{ background: `url('/img/background.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <content className="home-container" style={{ background: `url('/img/background.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="profile-card">
           <img src="https://avatars0.githubusercontent.com/u/31421876?s=460&u=39d86b3e443bf15e4a1d5a554c0426ae80dc9486&v=4" alt="João Couto" />
           <small>Olá, meu nome é</small>
