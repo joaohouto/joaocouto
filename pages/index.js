@@ -30,7 +30,7 @@ export default function Home({ posts }) {
         <meta property="og:title" content="João Couto" />
         <meta property="og:description" content="Olá! Seja bem vindo ao meu portfólio." />
         <meta property="og:site_name" content="João Couto" />
-        <meta property="og:image" content="/img/background.jpg" />
+        <meta property="og:image" content="/img/background.png" />
       </Head>
 
       <content className="home-container" style={{ background: `url('/img/background.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
@@ -51,7 +51,7 @@ export default function Home({ posts }) {
           <p><b>>_</b></p>
           <p>Atualmente, sou aluno do Instituto Federal de Mato Grosso do Sul cursando o 7º Semestre do curso Técnico Integrado em Informática.</p>
           <p>Desenvolvo aplicações web e aplicativos para Android e IOS utilizando tecnologias como ReactJS, NodeJS, NextJS e React Native.</p>
-          <p>Além disso, tenho um pouco de experiência com design gráfico, utilizando a Adobe Creative Suite (Photoshop, Illustrator, After Effects). </p>
+          <p>Além disso, tenho experiência com design gráfico, utilizando a Adobe Creative Suite (Photoshop, Illustrator, InDesign e After Effects). </p>
         </div>
       </content>
 
