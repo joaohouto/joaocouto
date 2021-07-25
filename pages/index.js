@@ -11,6 +11,27 @@ import Item from '../components/item'
 export default function Home({ posts }) {
 
   return (
+    <div className="home-blocker">
+      <Head>
+        <title>João Couto</title>
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#222222" />
+
+        <link rel="icon" href="/icon.png" />
+        <link rel="stylesheet" href="/styles.css" />
+
+        <meta name="author" content="João Couto" />
+      </Head>
+
+      <img src="/img/houto.svg" alt="houto03" />
+    </div>
+  );
+
+/*
+  return (
     <div>
       <Head>
         <title>João Couto</title>
@@ -78,6 +99,7 @@ export default function Home({ posts }) {
 
     </div>
   );
+*/
 }
 
 export async function getStaticProps() {
