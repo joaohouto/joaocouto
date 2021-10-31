@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            &copy; 2020 - João Couto
+            &copy; 2021 - João Couto
         </footer>
     );
 }
