@@ -69,8 +69,20 @@ header.general {
   margin-bottom: 30px;
   background: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+header.general h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+header.general span {
+  color: #999;
 }
 
 header.general h1 a {
@@ -301,7 +313,6 @@ div.post-text tr:nth-child(odd) {
 }
 
 footer {
-  background: #fafafa;
   padding: 30px 10%;
   margin-top: 2 0px;
   display: flex;

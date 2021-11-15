@@ -5,6 +5,7 @@ import Head from 'next/head'
 
 import { getAllPosts } from '../api'
 
+import Header from '../components/header'
 import Footer from '../components/footer'
 import Item from '../components/item'
 
@@ -33,28 +34,9 @@ export default function Home({ posts }) {
         <meta property="og:image" content="/img/background.png" />
       </Head>
 
-      <content className="home-container" style={{ background: `url('/img/background.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className="profile-card">
-          <img src="https://avatars0.githubusercontent.com/u/31421876?s=460&u=39d86b3e443bf15e4a1d5a554c0426ae80dc9486&v=4" alt="João Couto" />
-          <h1>João Couto</h1>
-          <small>Web/Graphic Design</small>
-
-          <div className="row">
-            <a href="mailto:joaocouto.jar@gmail.com"><Mail size={20} color="#333" /></a>
-            <a href="https://www.github.com/joaohouto/"><GitHub size={20} color="#333" /></a>
-            <a href="https://www.linkedin.com/in/jo%C3%A3o-couto-4a16a51ab/"><Linkedin size={20} color="#333" /></a>
-          </div>
-
-        </div>
-
-{/*         <div className="description-card">
-
-        </div> */}
-      </content>
+      <Header />
 
       <main className="home-container">
-
-        <h4 className="label">Portfólio</h4>
 
         {posts.map((post, index) => (
           <Link key={index} href={'/posts/' + post.slug}>
