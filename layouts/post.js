@@ -27,30 +27,32 @@ const Post = ({ title, tags, content, date, image, description }) => {
                 <meta property="og:image" content={image} />
             </Head>
 
-            <Header></Header>
+            <Header />
 
-            <main className="post-container">
-                <header>
-                    <div className="section">
-                        <div id="title-container">
+            <div className="wrapper">
+                <main className="post-container">
+                    <header>
+                        <div className="section">
+                            <div id="title-container">
 
-                            {tags.map(tag => (
-                                <span key={tag}>{tag}</span>
-                            ))}
+                                {tags.map(tag => (
+                                    <span key={tag}>{tag}</span>
+                                ))}
 
-                            <h2>{title}</h2>
-                            <p>Em {date}</p>
+                                <h2>{title}</h2>
+                                <p>Em {date}</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="section" id="image" style={{ background: `url('${image}')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}></div>
-                </header>
+                        <div className="section" id="image" style={{ background: `url('${image}')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}></div>
+                    </header>
 
-                <div className="post-text" dangerouslySetInnerHTML={{ __html: content }}></div>
+                    <div className="post-text" dangerouslySetInnerHTML={{ __html: content }}></div>
 
-            </main>
+                </main>
 
-            <Footer />
+                <Footer />
+            </div>
         </div>
     );
 }

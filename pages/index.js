@@ -1,5 +1,4 @@
 import React from 'react'
-import { Instagram, Linkedin, Mail, GitHub } from 'react-feather'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -36,25 +35,26 @@ export default function Home({ posts }) {
 
       <Header />
 
-      <main className="home-container">
+      <div className="wrapper">
+        <main className="home-container">
 
-        {posts.map((post, index) => (
-          <Link key={index} href={'/posts/' + post.slug}>
-            <a>
-              <Item
-                title={post.title}
-                description={post.description}
-                date={post.date}
-                image={post.image}
-              />
-            </a>
-          </Link>
-        ))}
+          {posts.map((post, index) => (
+            <Link key={index} href={'/posts/' + post.slug}>
+              <a>
+                <Item
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  image={post.image}
+                />
+              </a>
+            </Link>
+          ))}
 
-      </main>
+        </main>
 
-      <Footer />
-
+        <Footer />
+      </div>
     </div>
   );
 

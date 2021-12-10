@@ -15,14 +15,12 @@ export default function Post(props) {
   );
 }
 
-//get post from database context.params.slug  
 export async function getStaticProps(context) {
   const post = await getPostBySlug(context.params.slug);
 
   return { props: post }
 }
 
-//verify if post slug is valid
 export async function getStaticPaths() {
   const posts = await getAllPosts();
 
