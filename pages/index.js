@@ -23,14 +23,14 @@ export default function Home({ posts }) {
         <link rel="icon" href="/icon.png" />
         <link rel="stylesheet" href="/styles.css" />
 
-        <meta name="description" content="Olá! Seja bem vindo ao meu portfólio." />
+        <meta name="description" content="Olá! Seja bem vindo ao meu blog." />
         <meta name="author" content="João Couto" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:title" content="João Couto" />
-        <meta property="og:description" content="Olá! Seja bem vindo ao meu portfólio." />
+        <meta property="og:description" content="Olá! Seja bem vindo ao meu blog." />
         <meta property="og:site_name" content="João Couto" />
-        <meta property="og:image" content="/img/background.png" />
+        <meta property="og:image" content="/img/background.jpg" />
       </Head>
 
       <Header />

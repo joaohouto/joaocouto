@@ -105,7 +105,7 @@ header.general h1 a {
 }
 
 main.home-container {
-  padding: 20px 5%;
+  padding: 20px;
   background: #fff;
 }
 
@@ -253,10 +253,11 @@ div.post-text tr:nth-child(odd) {
 }
 
 footer {
-  padding: 30px 10%;
+  padding: 30px 20px;
   margin-top: 2 0px;
   display: flex;
-  color: #222;
+  color: #cdcdcd;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -273,11 +274,7 @@ h4.label {
     margin: 10px 0;
   }
 
-  header.general {
-  }
-
   div.wrapper {
-    justify-content: flex-start;
   }
 
   div.wrapper main {
@@ -297,6 +294,7 @@ h4.label {
 
   main.home-container div.item-post #image {
     min-width: 100px;
+    padding: 20px 10%;
   }
 
   div.post-text .table-container {
