@@ -105,7 +105,7 @@ header.general h1 a {
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   border: 0;
-  color: #2e89bd;
+  color: #222;
 }
 
 main.home-container {
@@ -264,9 +264,10 @@ div.post-text tr:nth-child(odd) {
 }
 
 footer {
+  width: 100%;
   padding: 30px 20px;
-  margin-top: 2 0px;
   display: flex;
+  justify-content: center;
   color: #cdcdcd;
   font-size: 14px;
   font-weight: bold;
@@ -286,6 +287,16 @@ h4.label {
   }
 
   div.wrapper {
+  }
+
+  header.general {
+    padding: 20px 10%;
+    margin-bottom: 30px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #eee;
   }
 
   div.wrapper main {
@@ -333,5 +344,9 @@ h4.label {
 
   content.home-container div.description-card {
     width: 100%;
+  }
+
+  footer {
+    justify-content: flex-start;
   }
 }
