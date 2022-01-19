@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -28,7 +28,7 @@
 }
 
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -61,11 +61,7 @@ img {
 }
 
 h2 {
-  font-family: "Poppins", sans-serif;
-}
-
-iframe {
-  border-radius: 8px;
+  font-family: "Inter", sans-serif;
 }
 
 div.wrapper {
@@ -103,7 +99,7 @@ header.general span {
 
 header.general h1 a {
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   border: 0;
   color: #222;
 }
@@ -284,9 +280,6 @@ h4.label {
   img {
     width: 100%;
     margin: 10px 0;
-  }
-
-  div.wrapper {
   }
 
   header.general {

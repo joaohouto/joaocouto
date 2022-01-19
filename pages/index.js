@@ -1,15 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
-import { getAllPosts } from '../api'
+import { getAllPosts } from "../api";
 
-import Header from '../components/header'
-import Footer from '../components/footer'
-import Item from '../components/item'
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Item from "../components/item";
 
 export default function Home({ posts }) {
-
   return (
     <div>
       <Head>
@@ -28,7 +27,10 @@ export default function Home({ posts }) {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:title" content="João Couto" />
-        <meta property="og:description" content="Olá! Seja bem vindo ao meu blog." />
+        <meta
+          property="og:description"
+          content="Olá! Seja bem vindo ao meu blog."
+        />
         <meta property="og:site_name" content="João Couto" />
         <meta property="og:image" content="/img/background.jpg" />
       </Head>
@@ -37,9 +39,8 @@ export default function Home({ posts }) {
 
       <div className="wrapper">
         <main className="home-container">
-
           {posts.map((post, index) => (
-            <Link key={index} href={'/posts/' + post.slug}>
+            <Link key={index} href={"/posts/" + post.slug}>
               <a>
                 <Item
                   title={post.title}
@@ -50,20 +51,18 @@ export default function Home({ posts }) {
               </a>
             </Link>
           ))}
-
         </main>
 
         <Footer />
       </div>
     </div>
   );
-
 }
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
 
   return {
-    props: { posts }
-  }
+    props: { posts },
+  };
 }
