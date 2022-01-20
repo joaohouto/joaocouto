@@ -36,8 +36,7 @@
   transition: opacity 0.4s ease;
 }
 
-body,
-html {
+body {
   height: 100%;
   width: 100%;
 }
@@ -45,7 +44,7 @@ html {
 a {
   color: #111;
   text-decoration: none;
-  border-bottom: 2px solid #111;
+  border-bottom: 2px solid #ddd;
 }
 
 a:hover {
@@ -76,32 +75,43 @@ div.wrapper main {
   max-width: 1000px;
 }
 
+/* Header */
+
 header.general {
-  padding: 20px 10%;
-  margin-bottom: 30px;
-  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+
+header.general > div {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
 }
 
 header.general h1 {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 15px;
-}
-
-header.general span {
-  color: #999;
 }
 
 header.general h1 a {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
-  border: 0;
   color: #222;
+  border: 0;
+}
+
+header.general ul {
+  display: flex;
+  list-style: none;
+}
+
+header.general ul li a {
+  border: 0;
+  margin: 0 0 0 20px;
 }
 
 main.home-container {
@@ -259,11 +269,17 @@ div.post-text tr:nth-child(odd) {
   background: #fafafa;
 }
 
+/* Footer */
+
 footer {
   width: 100%;
-  padding: 30px 20px;
   display: flex;
   justify-content: center;
+}
+
+footer > div {
+  width: 1000px;
+  padding: 30px 20px;
   color: #cdcdcd;
   font-size: 14px;
   font-weight: bold;
@@ -280,16 +296,6 @@ h4.label {
   img {
     width: 100%;
     margin: 10px 0;
-  }
-
-  header.general {
-    padding: 20px 10%;
-    margin-bottom: 30px;
-    background: #fff;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: 1px solid #eee;
   }
 
   div.wrapper main {

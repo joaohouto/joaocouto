@@ -1,9 +1,11 @@
-const Footer = () => {
-    return (
-        <footer>
-            &copy; 2021 - João Couto
-        </footer>
-    );
-}
+import moment from "moment";
 
-export default Footer
+const Footer = () => {
+  return (
+    <footer>
+      <div>&copy; {moment().format("YYYY")} - João Couto</div>
+    </footer>
+  );
+};
+
+export default Footer;

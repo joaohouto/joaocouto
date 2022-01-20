@@ -10,7 +10,6 @@ O Ápis é um app nativo para Android, feito em Java, que ajudei a desenvolver d
 
 ## ⚙️ Características
 
-O funcionamento é bem simples: o usuário pode criar lotes, e dentro dos lotes pode adicionar animais. Para cada animal, pode inserir observações, estas que o usuário mesmo define em uma outra página. Caso tenha optado, o utilizador recebe um anotificação para realizar a atualização dos dados do animal.
-
+O funcionamento é bem simples: o usuário pode criar lotes, e dentro dos lotes pode adicionar animais. Para cada animal, pode inserir observações, estas que o usuário mesmo define em uma outra página. Caso tenha optado, o utilizador recebe uma notificação para realizar a atualização dos dados do animal.
 
 [Mais detalhes no GitHub](https://github.com/joaocou/apis)
