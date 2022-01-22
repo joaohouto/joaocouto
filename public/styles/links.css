@@ -109,10 +109,21 @@ body {
   align-items: center;
 }
 
-.card a div svg {
+.card a > svg {
+  margin-left: 20px;
+}
+
+.card a > div > svg {
   margin-right: 20px;
 }
 
 .card a:hover {
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
 }
