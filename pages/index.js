@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>João Couto</title>
+        <title>João Couto - Links</title>
         <meta http-equiv="content-language" content="pt-br" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,13 +27,13 @@ export default function Home() {
         <meta name="author" content="João Couto" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
-        <meta property="og:title" content="João Couto" />
+        <meta property="og:title" content="João Couto - Links" />
         <meta
           property="og:description"
           content="Olá! Seja bem vindo ao meu blog."
         />
         <meta property="og:site_name" content="João Couto" />
-        <meta property="og:image" content="/img/background.jpg" />
+        <meta property="og:image" content="icon.png" />
       </Head>
 
       <div className="card">
@@ -53,7 +53,7 @@ export default function Home() {
 
         <a href="https://behance.net/joaohouto">
           <div>
-            <IconBrandBehance size={25} color="#222" /> Portfólio - Behance
+            <IconBrandBehance size={25} color="#222" /> Behance
           </div>
 
           <IconChevronRight size={25} color="#999" />
@@ -61,7 +61,7 @@ export default function Home() {
 
         <a href="https://github.com/joaohouto">
           <div>
-            <IconBrandGithub size={25} color="#222" /> Portfólio - GitHub
+            <IconBrandGithub size={25} color="#222" /> GitHub
           </div>
 
           <IconChevronRight size={25} color="#999" />
