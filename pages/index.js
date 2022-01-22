@@ -1,14 +1,15 @@
 import React from "react";
-import Link from "next/link";
 import Head from "next/head";
 
-import { getAllPosts } from "../api";
+import {
+  IconBrandLinkedin,
+  IconBrandBehance,
+  IconBrandGithub,
+  IconNews,
+  IconChevronRight,
+} from "@tabler/icons";
 
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Item from "../components/item";
-
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -20,7 +21,7 @@ export default function Home({ posts }) {
         <meta name="theme-color" content="#222222" />
 
         <link rel="icon" href="/icon.png" />
-        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="/styles/links.css" />
 
         <meta name="description" content="Olá! Seja bem vindo ao meu blog." />
         <meta name="author" content="João Couto" />
@@ -35,34 +36,45 @@ export default function Home({ posts }) {
         <meta property="og:image" content="/img/background.jpg" />
       </Head>
 
-      <Header />
+      <div className="card">
+        <div className="header">
+          <img src="https://github.com/joaohouto.png" />
+          <h1>João Couto</h1>
+          <p>contato@joaocouto.com</p>
+        </div>
 
-      <div className="wrapper">
-        <main className="home-container">
-          {posts.map((post, index) => (
-            <Link key={index} href={"/posts/" + post.slug}>
-              <a>
-                <Item
-                  title={post.title}
-                  description={post.description}
-                  date={post.date}
-                  image={post.image}
-                />
-              </a>
-            </Link>
-          ))}
-        </main>
+        <a href="https://linkedin.com/in/joaohouto">
+          <div>
+            <IconBrandLinkedin size={25} color="#222" /> LinkedIn
+          </div>
 
-        <Footer />
+          <IconChevronRight size={25} color="#999" />
+        </a>
+
+        <a href="https://behance.net/joaohouto">
+          <div>
+            <IconBrandBehance size={25} color="#222" /> Portfólio - Behance
+          </div>
+
+          <IconChevronRight size={25} color="#999" />
+        </a>
+
+        <a href="https://github.com/joaohouto">
+          <div>
+            <IconBrandGithub size={25} color="#222" /> Portfólio - GitHub
+          </div>
+
+          <IconChevronRight size={25} color="#999" />
+        </a>
+
+        <a href="/blog">
+          <div>
+            <IconNews size={25} color="#222" /> Blog
+          </div>
+
+          <IconChevronRight size={25} color="#999" />
+        </a>
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const posts = await getAllPosts();
-
-  return {
-    props: { posts },
-  };
 }

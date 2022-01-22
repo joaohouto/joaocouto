@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  --background: #f1f1f1;
+  --paper: #ffffff;
+  --outline: #cccccc;
+  --text: #222;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(148, 148, 148);
+  background-clip: padding-box;
+  border-image: initial;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 4px;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-button {
+  height: 0px;
+  width: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  transition: opacity 0.4s ease;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--background);
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+  background: var(--paper);
+  border-radius: 8px;
+  margin: 60px 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card textarea {
+  line-height: 31px;
+  font-size: 16px;
+  width: 650px;
+  resize: none;
+  background: none;
+  border: 0;
+  text-align: justify;
+  color: var(--text);
+
+  background-attachment: local;
+  background-image: linear-gradient(to right, var(--paper) 0, transparent 0),
+    linear-gradient(to left, var(--paper) 0, transparent 0),
+    repeating-linear-gradient(
+      var(--paper),
+      var(--paper) 30px,
+      var(--outline) 30px,
+      var(--outline) 31px,
+      var(--paper) 31px
+    );
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.navbar > div p {
+  margin-right: 10px;
+}
+
+.navbar > div code {
+  padding: 5px 10px;
+  background: var(--outline);
+  border-radius: 8px;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { IconBrandBehance, IconBrandGithub } from "@tabler/icons";
+import { IconBrackets } from "@tabler/icons";
 
 const Header = () => {
   return (
@@ -9,27 +9,12 @@ const Header = () => {
       <header className="general">
         <div>
           <h1>
-            <Link href="/">
+            <Link href="/blog">
               <a>João Couto</a>
             </Link>
           </h1>
 
-          <ul>
-            <li>
-              <Link href="https://www.behance.net/joaohouto">
-                <a>
-                  <IconBrandBehance size={25} color="#999" />
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/joaohouto">
-                <a>
-                  <IconBrandGithub size={25} color="#999" />
-                </a>
-              </Link>
-            </li>
-          </ul>
+          <IconBrackets size={20} color="#999" />
         </div>
       </header>
     </div>
