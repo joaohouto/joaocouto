@@ -13,8 +13,6 @@ const Header = () => {
               <a>João Couto</a>
             </Link>
           </h1>
-
-          <IconBrackets size={20} color="#999" />
         </div>
       </header>
     </div>
