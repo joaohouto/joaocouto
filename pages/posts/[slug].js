@@ -1,6 +1,6 @@
-import PostLayout from '../../layouts/post'
+import PostLayout from "../../layouts/post";
 
-import { getAllPosts, getPostBySlug } from '../../api'
+import { getAllPosts, getPostBySlug } from "../../api";
 
 export default function Post(props) {
   return (
@@ -18,15 +18,15 @@ export default function Post(props) {
 export async function getStaticProps(context) {
   const post = await getPostBySlug(context.params.slug);
 
-  return { props: post }
+  return { props: post };
 }
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
 
-  const paths = posts.map(post => ({
-    params: { slug: post.slug }
+  const paths = posts.map((post) => ({
+    params: { slug: post.slug },
   }));
 
-  return { paths, fallback: false }
+  return { paths, fallback: false };
 }

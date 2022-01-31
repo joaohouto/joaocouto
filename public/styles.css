@@ -270,6 +270,26 @@ div.post-text tr:nth-child(odd) {
   background: #fafafa;
 }
 
+pre {
+  font-family: Consolas, "courier new";
+  padding: 20px 30px;
+  width: 100%;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+pre code {
+  padding: 0;
+}
+
+code {
+  font-family: Consolas, "courier new";
+  background: #f1f1f1;
+  color: #333;
+  padding: 2px 5px;
+  border-radius: 8px;
+}
+
 /* Footer */
 
 footer {

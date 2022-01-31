@@ -53,7 +53,8 @@ export default function Home() {
 
         <a href="https://behance.net/joaohouto">
           <div>
-            <IconBrandBehance size={25} color="#222" /> Behance
+            <IconBrandBehance size={25} color="#222" />
+            Portfólio - Behance
           </div>
 
           <IconChevronRight size={25} color="#999" />
@@ -61,7 +62,8 @@ export default function Home() {
 
         <a href="https://github.com/joaohouto">
           <div>
-            <IconBrandGithub size={25} color="#222" /> GitHub
+            <IconBrandGithub size={25} color="#222" />
+            Portfólio - GitHub
           </div>
 
           <IconChevronRight size={25} color="#999" />
