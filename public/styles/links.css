@@ -54,6 +54,7 @@ body {
   justify-content: center;
 
   width: 600px;
+  padding: 40px 0;
 }
 
 .card .header {
@@ -101,6 +102,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card a div span {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(26, 139, 243, 0.2);
+  color: #1a8bf3;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 .card a div {

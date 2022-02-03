@@ -32,25 +32,7 @@ export default function Home() {
       </Head>
 
       <div className="card">
-        <textarea
-          id="text"
-          rows="30"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          onKeyDown={function (event) {
-            event.preventDefault();
-
-            if (event.key === "Tab") {
-              let v = event.value;
-              let s = event.selectionStart;
-              let e = event.selectionEnd;
-              event.value = v.substring(0, s) + "\t" + v.substring(e);
-              event.selectionStart = event.selectionEnd = s + 1;
-
-              return false;
-            }
-          }}
-        >
+        <textarea id="text" rows="30">
           {" "}
         </textarea>
       </div>

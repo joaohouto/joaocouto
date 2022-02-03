@@ -5,7 +5,7 @@ import {
   IconBrandLinkedin,
   IconBrandBehance,
   IconBrandGithub,
-  IconNews,
+  IconInfoSquare,
   IconChevronRight,
 } from "@tabler/icons";
 
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>João Couto - Links</title>
+        <title>João Couto</title>
         <meta http-equiv="content-language" content="pt-br" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,14 +23,17 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
         <link rel="stylesheet" href="/styles/links.css" />
 
-        <meta name="description" content="Olá! Seja bem vindo ao meu blog." />
+        <meta
+          name="description"
+          content="Graphic Designer / Full-Stack Developer. Entre em contato comigo → contato@joaocouto.com"
+        />
         <meta name="author" content="João Couto" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:title" content="João Couto - Links" />
         <meta
           property="og:description"
-          content="Olá! Seja bem vindo ao meu blog."
+          content="Graphic Designer / Full-Stack Developer. Entre em contato comigo → contato@joaocouto.com"
         />
         <meta property="og:site_name" content="João Couto" />
         <meta property="og:image" content="icon.png" />
@@ -54,7 +57,7 @@ export default function Home() {
         <a href="https://behance.net/joaohouto">
           <div>
             <IconBrandBehance size={25} color="#222" />
-            Portfólio - Behance
+            Behance <span>Portfólio</span>
           </div>
 
           <IconChevronRight size={25} color="#999" />
@@ -63,15 +66,15 @@ export default function Home() {
         <a href="https://github.com/joaohouto">
           <div>
             <IconBrandGithub size={25} color="#222" />
-            Portfólio - GitHub
+            GitHub <span>Portfólio</span>
           </div>
 
           <IconChevronRight size={25} color="#999" />
         </a>
 
-        <a href="/blog">
+        <a href="/docs/freelancing.pdf">
           <div>
-            <IconNews size={25} color="#222" /> Blog
+            <IconInfoSquare size={25} color="#222" /> Valores - Freelancing
           </div>
 
           <IconChevronRight size={25} color="#999" />
