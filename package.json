@@ -1,5 +1,5 @@
 {
-  "name": "joaocouto-blog",
+  "name": "joaocouto",
   "version": "1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,9 @@
   },
   "dependencies": {
     "@tabler/icons": "^1.53.0",
-    "gray-matter": "^4.0.2",
-    "marked": "^1.1.1",
     "moment": "^2.29.1",
     "next": "9.3.5",
-    "next-pwa": "^3.1.5",
-    "nextjs-sitemap-generator": "^1.1.1",
-    "raw-loader": "^4.0.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-feather": "^2.0.8"
+    "react-dom": "16.13.1"
   }
 }

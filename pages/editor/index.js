@@ -32,16 +32,12 @@ export default function Home() {
       </Head>
 
       <div className="card">
-        <textarea id="text" rows="30">
-          {" "}
-        </textarea>
-      </div>
-
-      <div className="navbar">
-        <div>
-          <p>Salvamento automático</p>
-          <code>Ativo</code>
-        </div>
+        <textarea
+          id="text"
+          rows="30"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></textarea>
       </div>
     </div>
   );

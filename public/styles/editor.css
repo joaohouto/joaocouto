@@ -65,7 +65,7 @@ body {
   padding: 40px 30px;
   background: var(--paper);
   border-radius: 8px;
-  margin: 60px 40px;
+  margin: 60px 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
