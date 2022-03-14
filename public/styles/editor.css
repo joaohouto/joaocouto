@@ -59,7 +59,7 @@ body {
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 40px 30px;
@@ -69,7 +69,22 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.card textarea {
+.card #lineCounter {
+  line-height: 31px;
+  font-size: 16px;
+  height: 930px;
+  width: 30px;
+  resize: none;
+  border: 0;
+  text-align: center;
+  color: var(--outline);
+  margin-right: 20px;
+  border-radius: 4px;
+
+  background: var(--background);
+}
+
+.card #text {
   line-height: 31px;
   font-size: 16px;
   width: 650px;
@@ -112,4 +127,12 @@ body {
   padding: 5px 10px;
   background: var(--outline);
   border-radius: 8px;
+}
+
+.navbar button {
+  padding: 10px 20px;
+  background: var(--outline);
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
 }

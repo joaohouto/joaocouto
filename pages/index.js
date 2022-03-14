@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>João Couto - Freelancing</title>
+        <title>João Couto</title>
         <meta httpEquiv="content-language" content="pt-br" />
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

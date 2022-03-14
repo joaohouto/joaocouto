@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 
 import { useDebounce } from "../../utils/debounce";
+import { generateTextStatistics } from "../../utils/generateTextStatistics";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -14,8 +15,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("@Editor:Text", text);
+    if (text !== "") {
+      localStorage.setItem("@Editor:Text", text);
+    }
   }, [debouncedText]);
+
+  const generateStatistics = () => {
+    generateTextStatistics(text);
+  };
 
   return (
     <div>
@@ -32,6 +39,10 @@ export default function Home() {
       </Head>
 
       <div className="card">
+        <textarea id="lineCounter" readOnly>
+          {`01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30`}
+        </textarea>
+
         <textarea
           id="text"
           rows="30"
@@ -39,6 +50,10 @@ export default function Home() {
           onChange={(e) => setText(e.target.value)}
         ></textarea>
       </div>
+
+      {/* <div className="navbar">
+        <button onClick={generateStatistics}>Gerar estatísticas</button>
+      </div> */}
     </div>
   );
 }
