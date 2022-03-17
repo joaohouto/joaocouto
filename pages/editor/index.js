@@ -8,6 +8,8 @@ export default function Home() {
   const [text, setText] = useState("");
   const debouncedText = useDebounce(text, 1000);
 
+  const [fontSize, setFontSize] = useState(16);
+
   useEffect(() => {
     const response = localStorage.getItem("@Editor:Text");
 
@@ -38,22 +40,42 @@ export default function Home() {
         <link rel="stylesheet" href="/styles/editor.css" />
       </Head>
 
+      <div className="navbar">
+        <div className="item">
+          <strong>Tamanho da fonte</strong>
+          <div className="button-wrapper">
+            <button
+              onClick={() => setFontSize((prev) => prev - 1)}
+              className="dot"
+            >
+              -
+            </button>
+            <span>{fontSize}</span>
+            <button
+              onClick={() => setFontSize((prev) => prev + 1)}
+              className="dot"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="card">
-        <textarea id="lineCounter" readOnly>
-          {`01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30`}
-        </textarea>
+        <textarea
+          id="lineCounter"
+          defaultValue={`01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30`}
+          readOnly
+        ></textarea>
 
         <textarea
           id="text"
           rows="30"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          style={{ fontSize: fontSize }}
         ></textarea>
       </div>
-
-      {/* <div className="navbar">
-        <button onClick={generateStatistics}>Gerar estatísticas</button>
-      </div> */}
     </div>
   );
 }

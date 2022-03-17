@@ -110,9 +110,9 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .navbar > div {
@@ -139,8 +139,42 @@ body {
   cursor: pointer;
 }
 
+.navbar div.item .button-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 8px;
+  background: #e4e4e4;
+}
+
+.navbar div.item strong {
+  margin-right: 20px;
+}
+
+.navbar div.item span {
+  margin: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.navbar button.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 26px;
+  width: 26px;
+  padding: 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
 @media print {
   .card {
     box-shadow: none;
+  }
+
+  .navbar {
+    display: none;
   }
 }
