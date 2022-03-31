@@ -3,6 +3,20 @@ To do:
 - Encontrar parágrafos: linhas por parágrafo, períodos
 - 
 
+{
+  totalWords,
+  totalParagraphs,
+  repeatedWords,
+  paragraphs,
+}
+
+{
+  paragraph: ["", "", ""],
+  paragraph: ["", "", ""],
+  paragraph: ["", "", ""],
+  paragraph: ["", "", ""],
+}
+
 */
 
 export function generateTextStatistics(text) {
@@ -26,11 +40,13 @@ export function generateTextStatistics(text) {
     }
   }); */
 
-  console.log(
-    `Palavras: ${words.length}\nParágrafos: ${
-      paragraphs.length
-    } \nContagem de repetições: \n ${JSON.stringify(countRepeatedWords(text))}`
-  );
+  const repeatedWords = countRepeatedWords(text);
+
+  return {
+    totalWords: words.length,
+    totalParagraphs: paragraphs.length,
+    repeatedWords,
+  };
 }
 
 function countRepeatedWords(sentence) {
@@ -49,13 +65,11 @@ function countRepeatedWords(sentence) {
     wordMap[words[i]] = count + 1;
   }
 
-  wordMap = Object.entries(wordMap).filter(([key, value]) => {
-    if (value > 1) {
-      return [key, value];
-    } else {
-      return undefined;
-    }
-  });
+  let wordList = Object.entries(wordMap).filter(([key, value]) =>
+    value > 1 ? [key, value] : undefined
+  );
 
-  return wordMap;
+  wordList.sort((a, b) => b[1] - a[1]);
+
+  return wordList;
 }

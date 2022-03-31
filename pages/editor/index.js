@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Head from "next/head";
 import moment from "moment";
 
-import { IconDownload, IconBulb, IconMoon } from "@tabler/icons";
+import { IconDownload, IconBulb, IconX } from "@tabler/icons";
 
 import { useDebounce } from "../../utils/debounce";
 import { generateTextStatistics } from "../../utils/generateTextStatistics";
@@ -14,30 +14,42 @@ export default function Home() {
   const debouncedText = useDebounce(text, 1000);
   const textRef = useRef();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [statistics, setStatistics] = useState({});
+
   useEffect(() => {
     const localText = localStorage.getItem("@Editor:Text");
     setText(localText);
 
     const localFont = localStorage.getItem("@Editor:FontSize");
-    setFontSize(JSON.parse(localFont));
+    setFontSize(JSON.parse(localFont) || 16);
   }, []);
 
   useEffect(() => {
-    if (text !== "") {
-      localStorage.setItem("@Editor:Text", text);
-    }
+    if (text != null) localStorage.setItem("@Editor:Text", text);
   }, [debouncedText]);
 
   useEffect(() => {
     localStorage.setItem("@Editor:FontSize", fontSize);
   }, [fontSize]);
 
+  const toggleModal = () => {
+    if (isModalOpen) {
+      setIsModalOpen(false);
+    } else {
+      setIsModalOpen(true);
+
+      const stats = generateTextStatistics(text);
+      setStatistics(stats);
+    }
+  };
+
   return (
     <div>
       <Head>
         <title>Documento</title>
-        <meta http-equiv="content-language" content="pt-br" />
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta httpEquiv="content-language" content="pt-br" />
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#222222" />
@@ -83,7 +95,7 @@ export default function Home() {
         </div>
 
         <div className="item">
-          <button onClick={() => generateTextStatistics(text)}>
+          <button onClick={toggleModal}>
             <IconBulb size={16} />
           </button>
 
@@ -94,10 +106,38 @@ export default function Home() {
           >
             <IconDownload size={16} />
           </button>
+        </div>
+      </div>
 
-          <button>
-            <IconMoon size={16} />
-          </button>
+      <div
+        className="modal"
+        style={{
+          transform: isModalOpen ? "translateY(0px)" : "translateY(30px)",
+          visibility: isModalOpen ? "visible" : "hidden",
+          opacity: isModalOpen ? 1 : 0,
+        }}
+      >
+        <button onClick={toggleModal}>
+          <IconX size={20} />
+        </button>
+
+        <h2>Estatísticas</h2>
+
+        <p>
+          <strong>Palavras:</strong> {statistics.totalWords}
+        </p>
+        <p>
+          <strong>Parágrafos:</strong> {statistics.totalParagraphs}
+        </p>
+
+        <h3>Repetições</h3>
+
+        <div className="repetitions">
+          {statistics.repeatedWords?.map((word) => (
+            <p>
+              {word[0]} <span>{word[1]}</span>
+            </p>
+          ))}
         </div>
       </div>
     </div>
