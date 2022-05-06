@@ -59,7 +59,7 @@ export default function Home() {
 
         <a href="https://linkedin.com/in/joaohouto">
           <div>
-            <IconBrandLinkedin size={25} color="#222" stroke={2} /> LinkedIn
+            <IconBrandLinkedin size={25} stroke={2} /> LinkedIn
           </div>
 
           <IconChevronRight size={25} color="#999" stroke={2} />
@@ -67,7 +67,7 @@ export default function Home() {
 
         <a href="https://behance.net/joaohouto">
           <div>
-            <IconBrandBehance size={25} color="#222" stroke={2} />
+            <IconBrandBehance size={25} stroke={2} />
             Behance <span>Graphic Design</span>
           </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
 
         <a href="https://github.com/joaohouto">
           <div>
-            <IconBrandGithub size={25} color="#222" stroke={2} />
+            <IconBrandGithub size={25} stroke={2} />
             GitHub <span>Full-Stack Dev</span>
           </div>
 
