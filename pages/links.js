@@ -1,21 +1,15 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
-import VanillaTilt from "vanilla-tilt";
 
 import {
   IconBrandLinkedin,
   IconBrandBehance,
   IconBrandGithub,
   IconMail,
+  IconChevronRight,
 } from "@tabler/icons";
 
 export default function Home() {
-  const tilt = useRef(null);
-
-  useEffect(() => {
-    VanillaTilt.init(tilt.current);
-  }, []);
-
   return (
     <div>
       <Head>
@@ -48,32 +42,46 @@ export default function Home() {
         />
       </Head>
 
-      <div className="profile-card" ref={tilt} data-tilt-scale="1.05">
+      <div className="card">
         <div className="header">
           <img src="https://avatars.githubusercontent.com/u/31421876?v=4" />
-          <div>
-            <h1>João Couto</h1>
-            <p>contato@joaocouto.com</p>
-
-            <div className="links">
-              <a href="mailto:contato@joaocouto.com" className="active">
-                <IconMail size={26} stroke={2} />
-              </a>
-
-              <a href="https://linkedin.com/in/joaohouto">
-                <IconBrandLinkedin size={26} stroke={2} />
-              </a>
-
-              <a href="https://behance.net/joaohouto">
-                <IconBrandBehance size={26} stroke={2} />
-              </a>
-
-              <a href="https://github.com/joaohouto">
-                <IconBrandGithub size={26} stroke={2} />
-              </a>
-            </div>
-          </div>
+          <h1>João Couto</h1>
+          <p>contato@joaocouto.com</p>
         </div>
+
+        <a href="mailto:contato@joaocouto.com" className="active">
+          <div>
+            <IconMail size={25} color="#222" stroke={2} /> Fale comigo
+          </div>
+
+          <IconChevronRight size={25} color="#999" stroke={2} />
+        </a>
+
+        <a href="https://linkedin.com/in/joaohouto">
+          <div>
+            <IconBrandLinkedin size={25} stroke={2} /> LinkedIn
+          </div>
+
+          <IconChevronRight size={25} color="#999" stroke={2} />
+        </a>
+
+        <a href="https://behance.net/joaohouto">
+          <div>
+            <IconBrandBehance size={25} stroke={2} />
+            Behance <span>Graphic Design</span>
+          </div>
+
+          <IconChevronRight size={25} color="#999" stroke={2} />
+        </a>
+
+        <a href="https://github.com/joaohouto">
+          <div>
+            <IconBrandGithub size={25} stroke={2} />
+            GitHub <span>Full-Stack Dev</span>
+          </div>
+
+          <IconChevronRight size={25} color="#999" stroke={2} />
+        </a>
       </div>
     </div>
   );
