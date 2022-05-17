@@ -2,12 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Head from "next/head";
 import VanillaTilt from "vanilla-tilt";
 
-import {
-  IconBrandLinkedin,
-  IconBrandBehance,
-  IconBrandGithub,
-  IconMail,
-} from "@tabler/icons";
+import { FaEnvelope, FaLinkedinIn, FaBehance, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const tilt = useRef(null);
@@ -27,7 +22,7 @@ export default function Home() {
         <meta name="theme-color" content="#1a8bf3" />
 
         <link rel="icon" href="/icon.png" />
-        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="./card.css" />
 
         <meta
           name="description"
@@ -49,30 +44,33 @@ export default function Home() {
       </Head>
 
       <div className="profile-card" ref={tilt} data-tilt-scale="1.05">
-        <div className="header">
+        <div className="info">
           <img src="https://avatars.githubusercontent.com/u/31421876?v=4" />
-          <div>
-            <h1>João Couto</h1>
-            <p>contato@joaocouto.com</p>
 
-            <div className="links">
-              <a href="mailto:contato@joaocouto.com" className="active">
-                <IconMail size={26} stroke={2} />
-              </a>
+          <h1>João Couto</h1>
+          <p>contato@joaocouto.com</p>
 
-              <a href="https://linkedin.com/in/joaohouto">
-                <IconBrandLinkedin size={26} stroke={2} />
-              </a>
+          <div className="links">
+            <a href="mailto:contato@joaocouto.com">
+              <FaEnvelope alt="Email" />
+            </a>
 
-              <a href="https://behance.net/joaohouto">
-                <IconBrandBehance size={26} stroke={2} />
-              </a>
+            <a href="https://linkedin.com/in/joaohouto">
+              <FaLinkedinIn alt="LinkedIn" />
+            </a>
 
-              <a href="https://github.com/joaohouto">
-                <IconBrandGithub size={26} stroke={2} />
-              </a>
-            </div>
+            <a href="https://behance.net/joaohouto">
+              <FaBehance alt="Behance" />
+            </a>
+
+            <a href="https://github.com/joaohouto">
+              <FaGithub alt="GitHub" />
+            </a>
           </div>
+        </div>
+
+        <div className="barcode">
+          <img src="/barcode.png" />
         </div>
       </div>
     </div>
