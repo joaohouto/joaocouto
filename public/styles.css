@@ -40,8 +40,8 @@ body {
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  color: #222;
-  background: #f1f1f1;
+  color: #fff;
+  background: #1a1a1a;
 
   display: flex;
   align-items: center;
@@ -80,15 +80,15 @@ body {
 
 .card p {
   font-size: 16px;
-  color: #777;
+  color: #999;
 }
 
 .card a {
   font-size: 16px;
   font-weight: 600;
-  color: #222;
+  color: #fff;
   text-decoration: none;
-  background: #fff;
+  background: #222;
   padding: 20px;
   width: 100%;
   border-radius: 20px;
@@ -113,8 +113,8 @@ body {
 .card a div span {
   padding: 5px 10px;
   border-radius: 20px;
-  background: #eee;
-  color: #333;
+  background: #333;
+  color: #eee;
   font-size: 12px;
   margin-left: 10px;
 }
